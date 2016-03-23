@@ -1,0 +1,12 @@
+RULE trace main entry
+CLASS weblogic.Server
+METHOD main
+HELPER com.dhnhan.byteman.MBeanHelper
+AT ENTRY
+IF true
+DO 
+traceln("*********************************************************************************************");
+traceln("*******DInh Huu Nhan*************************************************************************");
+traceln("*********************************************************************************************");
+sendData();
+ENDRULE
